@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import { LoginPage } from './LoginPage/LoginPage';
 import { SignupPage } from './SignupPage/SignupPage';
 import { SessionsPage } from './SessionsPage/SessionsPage';
@@ -18,7 +18,7 @@ export function getCookie(key: string) {
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path='/' element={<LoginPage />} />
         <Route path='/GymTrack' element={<LoginPage />} />
@@ -28,7 +28,7 @@ function App() {
         <Route path='/GymTrack/exercises/:sessionId/:sessionNum/:sessionDate' element={<ExercisesPage />} />
         <Route path='/GymTrack/sets-and-reps/:exerciseId/:exercise/:weight' element={<SetReps />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
