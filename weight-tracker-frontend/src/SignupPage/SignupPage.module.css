@@ -1,0 +1,103 @@
+
+@media screen and (min-width: 600px) {
+    .page-container {
+        margin-right: 33%;
+        margin-left: 33%;
+    }
+
+    .outer-page-background {
+        background-color: #dfdfdf;
+    }
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    /* border: 1px solid black; */
+}
+
+.form-label {
+    margin-left: 5vw;
+}
+
+.form-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-h1 {
+    align-self: center;
+}
+
+.form-input {
+    border-color: darkblue;
+    border-style: solid;
+    padding: 8px 1rem 8px 1rem;
+    font-size: large;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 1rem 0rem 1rem;
+    /* border: 1px solid black; */
+}
+
+.form-button {
+    padding: 3% 6% 3% 6%;
+    border-radius: 30px;
+    border-style: solid;
+    border: 0px;
+    background-color: #ED820D;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: black;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.form-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.login-link {
+    padding: 3% 6% 3% 6%;
+    border-radius: 30px;
+    border-style: solid;
+    border: 0px;
+    background-color: #ED820D;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 200ms ease, color 200ms ease;
+    color: inherit;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.not-same-pass {
+    color: #BA3E3E;
+}
+
+.invalid-signup-button {
+    background-color: red;
+    color: black;
+    padding: 3% 6% 3% 6%;
+    border-radius: 30px;
+    border-style: solid;
+    border: 0px;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 1rem;
+}

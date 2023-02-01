@@ -1,0 +1,59 @@
+@media screen and (min-width: 600px) {
+    .page_container {
+        margin-right: 33%;
+        margin-left: 33%;
+    }
+
+    .outer_page_background {
+        background-color: #dfdfdf;
+    }
+}
+
+.page_container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.setrep_card_container {
+    border: solid black 1px;
+    border-radius: 13px;
+    margin: 3% 5% 3% 5%;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.setrep_inner_info {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.form_container {
+    display: flex;
+    margin-left: 5%;
+}
+
+.submit_button {
+    padding: 2% 3% 2% 3%;
+    background-color: #46C2E0;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.update_button {
+    padding: .5rem 1rem .5rem 1rem;
+    margin-bottom: .5rem;
+    border-radius: 1rem;
+}
+
+.card_buttons_container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

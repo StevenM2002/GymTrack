@@ -1,0 +1,15 @@
+.back_button {
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 1rem;
+    margin-right: 5%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    margin-left: 5%;
+}
