@@ -86,7 +86,7 @@ export const SignupForm = () => {
                 </label>
                 <div className={styles['submit-container']}>
                     <button type='submit' className={isFormOk() ? styles['form-button'] : styles['invalid-signup-button']}>Register</button>
-                    <button className={styles['login-link']} onClick={() => nav(navbase + '/login')}>Login Instead!</button>
+                    <a className={styles['login-link']} href={navbase + '/login'}>Login Instead!</a>
                 </div>
             </form>
         </div>
