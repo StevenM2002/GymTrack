@@ -18,7 +18,7 @@ export function getCookie(key: string) {
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<LoginPage />} />
         <Route path='/GymTrack' element={<LoginPage />} />
@@ -28,7 +28,7 @@ function App() {
         <Route path='/GymTrack/exercises/:sessionId/:sessionNum/:sessionDate' element={<ExercisesPage />} />
         <Route path='/GymTrack/sets-and-reps/:exerciseId/:exercise/:weight' element={<SetReps />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
