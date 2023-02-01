@@ -20,6 +20,8 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
+        <Route path='/' element={<LoginPage />} />
+        <Route path='/GymTrack' element={<LoginPage />} />
         <Route path='/GymTrack/login' element={<LoginPage />} />
         <Route path='/GymTrack/signup' element={<SignupPage />} />
         <Route path='/GymTrack/sessions' element={<SessionsPage />} />
