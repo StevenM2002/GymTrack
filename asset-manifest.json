@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GymTrack/static/css/main.4c1f391f.css",
-    "main.js": "/GymTrack/static/js/main.5fd4e09c.js",
+    "main.js": "/GymTrack/static/js/main.ca3bfec4.js",
     "static/js/787.cd014bfd.chunk.js": "/GymTrack/static/js/787.cd014bfd.chunk.js",
     "index.html": "/GymTrack/index.html",
     "main.4c1f391f.css.map": "/GymTrack/static/css/main.4c1f391f.css.map",
-    "main.5fd4e09c.js.map": "/GymTrack/static/js/main.5fd4e09c.js.map",
+    "main.ca3bfec4.js.map": "/GymTrack/static/js/main.ca3bfec4.js.map",
     "787.cd014bfd.chunk.js.map": "/GymTrack/static/js/787.cd014bfd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c1f391f.css",
-    "static/js/main.5fd4e09c.js"
+    "static/js/main.ca3bfec4.js"
   ]
 }
