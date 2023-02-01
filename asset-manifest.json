@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gymtrack/static/css/main.4c1f391f.css",
-    "main.js": "/gymtrack/static/js/main.1bdba5c2.js",
-    "static/js/787.cd014bfd.chunk.js": "/gymtrack/static/js/787.cd014bfd.chunk.js",
-    "index.html": "/gymtrack/index.html",
-    "main.4c1f391f.css.map": "/gymtrack/static/css/main.4c1f391f.css.map",
-    "main.1bdba5c2.js.map": "/gymtrack/static/js/main.1bdba5c2.js.map",
-    "787.cd014bfd.chunk.js.map": "/gymtrack/static/js/787.cd014bfd.chunk.js.map"
+    "main.css": "/GymTrack/static/css/main.4c1f391f.css",
+    "main.js": "/GymTrack/static/js/main.3d90ce55.js",
+    "static/js/787.cd014bfd.chunk.js": "/GymTrack/static/js/787.cd014bfd.chunk.js",
+    "index.html": "/GymTrack/index.html",
+    "main.4c1f391f.css.map": "/GymTrack/static/css/main.4c1f391f.css.map",
+    "main.3d90ce55.js.map": "/GymTrack/static/js/main.3d90ce55.js.map",
+    "787.cd014bfd.chunk.js.map": "/GymTrack/static/js/787.cd014bfd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c1f391f.css",
-    "static/js/main.1bdba5c2.js"
+    "static/js/main.3d90ce55.js"
   ]
 }
