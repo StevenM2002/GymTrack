@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { baseurl } from '../Constants';
 import styles from './SignupPage.module.css'
 
 export const SignupForm = () => {
@@ -13,7 +14,7 @@ export const SignupForm = () => {
         if (!isFormOk()) {
             return;
         }
-        fetch('/profile/signup/', {
+        fetch(baseurl + '/profile/signup/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

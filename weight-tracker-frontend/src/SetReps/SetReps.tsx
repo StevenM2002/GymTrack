@@ -1,6 +1,7 @@
 import React, { SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCookie } from '../App';
+import { baseurl } from '../Constants';
 import BackNav from '../SharedComponents/BackNav';
 import SetRepCard from './SetRepCard';
 import styles from './SetReps.module.css';
@@ -23,7 +24,7 @@ export default () => {
         if (exerciseId === undefined) {
             return;
         }
-        fetch('/log/setrep/?' + new URLSearchParams({
+        fetch(baseurl + '/log/setrep/?' + new URLSearchParams({
             owner_id: exerciseId
         }), {
             method: 'GET',
@@ -50,7 +51,7 @@ export default () => {
             return;
         }
         const data = {number_reps: repRef.current.value, did_fail: false, owner_id: exerciseId};
-        fetch('/log/setrep/', {
+        fetch(baseurl + '/log/setrep/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -65,7 +66,7 @@ export default () => {
 
     const updateSetRep = (body : {key: number, number_reps: number, did_fail: boolean}, e: React.SyntheticEvent) => {
         e.preventDefault()
-        fetch('/log/setrep/', {
+        fetch(baseurl + '/log/setrep/', {
             method:'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -90,7 +91,7 @@ export default () => {
         if (id === undefined || parseFloat(id.toString()).toString() !== id.toString()) {
             return;
         }
-        fetch('/log/setrep/?' + new URLSearchParams({key: id.toString()}), {
+        fetch(baseurl + '/log/setrep/?' + new URLSearchParams({key: id.toString()}), {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

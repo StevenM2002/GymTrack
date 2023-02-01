@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { baseurl } from '../Constants';
 import styles from './LoginPage.module.css'
 
 interface profileLogin {
@@ -15,7 +16,7 @@ export const LoginForm = () => {
         if (userDetails.password === '' || userDetails.username === '') {
             return;
         }
-        fetch('/profile/login/', {
+        fetch(baseurl + '/profile/login/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

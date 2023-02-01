@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import ExerciseCard from './ExerciseCard';
 import { getCookie } from '../App';
 import BackNav from '../SharedComponents/BackNav';
+import { baseurl } from '../Constants';
 
 export interface logExerciseType {
     owner_key: number;
@@ -28,7 +29,7 @@ export default () => {
     const exerciseName = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
-        fetch('/log/exercise/?' + new URLSearchParams({owner_id: sessionId!}), 
+        fetch(baseurl + '/log/exercise/?' + new URLSearchParams({owner_id: sessionId!}), 
         {
             method: 'GET',
             headers: {
@@ -61,7 +62,7 @@ export default () => {
             alert('Weight must be a number');
             return;
         };
-        fetch('/log/exercise/', {
+        fetch(baseurl + '/log/exercise/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -85,7 +86,7 @@ export default () => {
     };
 
     const deleteExercise = (id: number) => {
-        fetch('/log/exercise/?' + new URLSearchParams({
+        fetch(baseurl + '/log/exercise/?' + new URLSearchParams({
             key: id.toString(),
         }), {
             method: 'DELETE',
@@ -109,7 +110,7 @@ export default () => {
             alert('Weight must be a number');
             return;
         }
-        fetch('/log/exercise/', {
+        fetch(baseurl + '/log/exercise/', {
             method:'PUT',
             headers: {
                 'Content-Type': 'application/json',

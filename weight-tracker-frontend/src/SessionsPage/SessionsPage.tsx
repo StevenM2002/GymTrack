@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getCookie } from '../App';
+import { baseurl } from '../Constants';
 import Signout from '../SharedComponents/Signout';
 import PerSessionInfo from './PerSessionInfo';
 import styles from './SessionsPage.module.css';
@@ -12,7 +13,7 @@ export interface logSessionType {
 export const SessionsPage = () => {
     const [sessions, setSessions] = useState<logSessionType[]>([]);
     const receiveSessions = () => {
-        fetch('/log/session/', {
+        fetch(baseurl + '/log/session/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,7 +31,7 @@ export const SessionsPage = () => {
     }
     useEffect(receiveSessions, []);
     const createSession = () => {
-        fetch('/log/session/', {
+        fetch(baseurl + '/log/session/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -45,7 +46,7 @@ export const SessionsPage = () => {
         }).catch(e => console.log('fetch error '+e));
     }
     const removeSession = (sessionKey: number) => {
-        fetch('/log/session/?' + new URLSearchParams({
+        fetch(baseurl + '/log/session/?' + new URLSearchParams({
             key: sessionKey.toString()
         }), 
         {
