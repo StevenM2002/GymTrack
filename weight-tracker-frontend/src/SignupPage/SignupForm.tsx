@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { baseurl } from '../Constants';
+import { baseurl, navbase } from '../Constants';
 import styles from './SignupPage.module.css'
 
 export const SignupForm = () => {
@@ -30,7 +30,7 @@ export const SignupForm = () => {
         })
         .then(res => res.json())
         .then((res: {token: string}) => document.cookie = `Authorization=Token ${res.token};`)
-        .then(() => nav('/sessions/'))
+        .then(() => nav(navbase + '/sessions/'))
         .catch(e => console.log('fetch error' + e));
     };
 

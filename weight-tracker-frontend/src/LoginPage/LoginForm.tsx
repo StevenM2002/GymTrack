@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { baseurl } from '../Constants';
+import { baseurl, navbase } from '../Constants';
 import styles from './LoginPage.module.css'
 
 interface profileLogin {
@@ -34,7 +34,7 @@ export const LoginForm = () => {
         .then(res => res.json())
         .then((res: profileLogin) => {
             document.cookie = `Authorization=Token ${res.token};`;
-        }).then(() => nav('/sessions')).catch((e) => console.log('Fetch error', e));
+        }).then(() => nav(navbase + '/sessions')).catch((e) => console.log('Fetch error', e));
     };
 
     const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {

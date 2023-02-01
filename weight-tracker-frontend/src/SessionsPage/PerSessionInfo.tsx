@@ -1,6 +1,7 @@
 import styles from './SessionsPage.module.css';
 import { logSessionType } from './SessionsPage';
 import { useNavigate } from 'react-router-dom';
+import { navbase } from '../Constants';
 
 
 interface PerSessionInfoProps extends logSessionType {
@@ -12,7 +13,7 @@ export default (props: PerSessionInfoProps) => {
     const nav = useNavigate();
     const goToExercises = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         if (e.target === e.currentTarget) {
-            nav(`/exercises/${props.id}/${props.sessionNum}/${props.date_created}`);
+            nav(navbase + `/exercises/${props.id}/${props.sessionNum}/${props.date_created}`);
         }
     };
 

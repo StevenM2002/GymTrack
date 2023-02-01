@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { navbase } from '../Constants';
 import { logExerciseType } from './ExercisesPage';
 import styles from './ExercisesPage.module.css';
 
@@ -66,7 +67,7 @@ export default (props: exerciseCardProps) => {
 
     const goToSetRep = (e: React.SyntheticEvent) => {
         if (e.target === e.currentTarget) {
-            nav(`/sets-and-reps/${props.id}/${props.exercise}/${props.weight}`);
+            nav(navbase + `/sets-and-reps/${props.id}/${props.exercise}/${props.weight}`);
         }
     };
 
