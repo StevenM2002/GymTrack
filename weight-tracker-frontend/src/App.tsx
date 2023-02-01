@@ -18,7 +18,7 @@ export function getCookie(key: string) {
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<LoginPage />} />
         <Route path='/GymTrack' element={<LoginPage />} />
