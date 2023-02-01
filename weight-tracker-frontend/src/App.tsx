@@ -21,12 +21,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<LoginPage />} />
-        <Route path='/GymTrack' element={<LoginPage />} />
-        <Route path='/GymTrack/login' element={<LoginPage />} />
-        <Route path='/GymTrack/signup' element={<SignupPage />} />
-        <Route path='/GymTrack/sessions' element={<SessionsPage />} />
-        <Route path='/GymTrack/exercises/:sessionId/:sessionNum/:sessionDate' element={<ExercisesPage />} />
-        <Route path='/GymTrack/sets-and-reps/:exerciseId/:exercise/:weight' element={<SetReps />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/signup' element={<SignupPage />} />
+        <Route path='/sessions' element={<SessionsPage />} />
+        <Route path='/exercises/:sessionId/:sessionNum/:sessionDate' element={<ExercisesPage />} />
+        <Route path='/sets-and-reps/:exerciseId/:exercise/:weight' element={<SetReps />} />
       </Routes>
     </BrowserRouter>
   );
