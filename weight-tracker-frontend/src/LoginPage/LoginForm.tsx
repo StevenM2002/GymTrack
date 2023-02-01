@@ -60,7 +60,7 @@ export const LoginForm = () => {
                 </label>
                 <div className={styles['submit-container']}>
                     <button type='submit' className={styles['form-button']}>Login</button>
-                    <a className={styles['register-link']} href='/signup'>Register Here!</a>
+                    <button className={styles['register-link']} onClick={() => nav(navbase + '/signup')}>Register Here!</button>
                 </div>
             </form>
         </div>
